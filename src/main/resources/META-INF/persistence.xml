@@ -4,19 +4,17 @@
   <persistence-unit name="applicationPetstorePU" transaction-type="JTA">
     <!--<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>-->
     <properties>
-      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-      <property name="javax.persistence.sql-load-script-source" value="init_db.sql"/>
+	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+	<property name="javax.persistence.sql-load-script-source" value="init_db.sql"/>
 
-      <!-- Properties for EclipseLink -->
-      <property name="eclipselink.logging.level" value="INFO"/>
+	<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/jvmhubtutorial" />
+	<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+	<property name="hibernate.connection.username" value="adminjk8vliu" />
+	<property name="hibernate.connection.password" value="Gw9kVkChXCqp" />
 
-      <!-- Properties for Hibernate -->
-      <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
-      <property name="hibernate.show_sql" value="true"/>
-      <property name="hibernate.format_sql" value="true"/>
+	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+	<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 
-      <!-- openjpa -->
-      <property name="openjpa.Log" value="SQL=TRACE"/>
     </properties>
   </persistence-unit>
 </persistence>
