@@ -4,6 +4,15 @@
   <persistence-unit name="applicationPetstorePU" transaction-type="JTA">
     <!--<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>-->
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>main.java.org.agoncal.application.petstore.model.Address</class>
+    <class>main.java.org.agoncal.application.petstore.model.Category</class>
+    <class>main.java.org.agoncal.application.petstore.model.Country</class>
+    <class>main.java.org.agoncal.application.petstore.model.CreditCard</class>
+    <class>main.java.org.agoncal.application.petstore.model.Customer</class>
+    <class>main.java.org.agoncal.application.petstore.model.Item</class>
+    <class>main.java.org.agoncal.application.petstore.model.OrderLine</class>
+    <class>main.java.org.agoncal.application.petstore.model.Product</class>
+    <class>main.java.org.agoncal.application.petstore.model.PurchaseOrder</class>   
     <properties>
 	<!-- 	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> -->
 	<!-- 	<property name="javax.persistence.sql-load-script-source" value="init_db.sql"/> -->
