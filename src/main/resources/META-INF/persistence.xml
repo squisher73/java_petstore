@@ -7,7 +7,7 @@
 	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 	<property name="javax.persistence.sql-load-script-source" value="init_db.sql"/>
 
-	<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/jvmhubtutorial" />
+	<property name="hibernate.connection.url" value="jdbc:postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT" />
 	<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 	<property name="hibernate.connection.username" value="adminjk8vliu" />
 	<property name="hibernate.connection.password" value="Gw9kVkChXCqp" />
