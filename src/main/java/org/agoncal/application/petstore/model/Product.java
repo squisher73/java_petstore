@@ -45,7 +45,7 @@ public class Product implements Serializable
    @Size(max = 3000)
    private String description;
 
-   @ManyToOne(cascade = CascadeType.PERSIST)
+   @ManyToOne(cascade = CascadeType.MERGE)
    @JoinColumn(name = "category_fk", nullable = false)
    @XmlTransient
    private Category category;
