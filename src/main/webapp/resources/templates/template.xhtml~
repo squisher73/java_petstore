@@ -24,8 +24,8 @@
 
 
         <!-- Custom styles for this template -->
-        <h:outputStylesheet name="../css/style.css"/>
-        <h:outputStylesheet name="../css/sticky-footer-navbar.css"/>
+        <h:outputStylesheet name="css/style.css"/>
+        <h:outputStylesheet name="css/sticky-footer-navbar.css"/>
     </h:head>
 
     <!--BODY-->
