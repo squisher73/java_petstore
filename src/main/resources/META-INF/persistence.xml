@@ -2,23 +2,30 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
   <persistence-unit name="applicationPetstorePU" transaction-type="JTA">
-    <!--<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>-->
-    <provider>org.hibernate.ejb.HibernatePersistence</provider>   
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:jboss/datasources/PostgreSQLDS</jta-data-source>
+
+    <class>main.java.org.agoncal.application.petstore.model.Address</class>
+    <class>main.java.org.agoncal.application.petstore.model.Category</class>
+    <class>main.java.org.agoncal.application.petstore.model.Country</class>
+    <class>main.java.org.agoncal.application.petstore.model.CreditCard</class>
+    <class>main.java.org.agoncal.application.petstore.model.Customer</class>
+    <class>main.java.org.agoncal.application.petstore.model.Item</class>
+    <class>main.java.org.agoncal.application.petstore.model.OrderLine</class>
+    <class>main.java.org.agoncal.application.petstore.model.Product</class>
+    <class>main.java.org.agoncal.application.petstore.model.PurchaseOrder</class>
+
     <properties>
-	<!-- <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> -->
-	<!-- <property name="javax.persistence.sql-load-script-source" value="init_db.sql"/> -->
 
-	<property name="hibernate.archive.autodetection" value="class" />
-	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-	<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
-
-	<property name="hibernate.connection.url" value="jdbc:postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/wildflytest" />
-	<property name="hibernate.connection.username" value="adminjk8vliu" />
-	<property name="hibernate.connection.password" value="Gw9kVkChXCqp" />
-	<!-- <property name="hibernate.show_sql" value="true"/> -->
-	<property name="hibernate.flushMode" value="FLUSH_AUTO" />
-	<property name="hibernate.hbm2ddl.auto" value="create-drop" />
-	<property name="hibernate.hbm2ddl.import_files" value="/META-INF/init_db.sql.sql" />
+	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+	<property name="javax.persistence.sql-load-script-source" value="init_db.sql"/>
+	<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+	<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/wildflytest" />
+	<property name="javax.persistence.jdbc.user" value="adminjk8vliu" />
+	<property name="javax.persistence.jdbc.password" value="Gw9kVkChXCqp" />
+	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+	<property name="show_sql" value="true"/>
+	<property name="hibernate.format_sql" value="true"/>
 
     </properties>
   </persistence-unit>
