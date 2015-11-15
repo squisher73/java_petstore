@@ -10,7 +10,7 @@ ADD ROOT.war /opt/jboss/wildfly/standalone/deployments/
 #USER jboss
 # allow jboss user access to /opt/jboss and /opt/karaf
 #squisher73	3F6IrrK5Hd7nOtcxhd1qFx4cK
-RUN chown -R 1000 /opt/jboss
+#RUN chown -R 1000 /opt/jboss
 
 # STI requires a numeric, non-0 UID
 #USER 1000
