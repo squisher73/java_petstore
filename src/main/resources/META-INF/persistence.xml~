@@ -21,8 +21,8 @@
 	<property name="javax.persistence.sql-load-script-source" value="init_db.sql"/>
 	<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 	<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT/wildflytest" />
-	<property name="javax.persistence.jdbc.user" value="adminjk8vliu" />
-	<property name="javax.persistence.jdbc.password" value="Gw9kVkChXCqp" />
+	<property name="javax.persistence.jdbc.user" value="adminwbxytyf" />
+	<property name="javax.persistence.jdbc.password" value="NqYAtefeY6sM" />
 	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
 	<property name="show_sql" value="true"/>
 	<property name="hibernate.format_sql" value="true"/>
