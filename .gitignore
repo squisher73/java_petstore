@@ -7,7 +7,6 @@ Thumbs.db
 target
 *.class
 *.jar
-*.ear
 *.rar
 *.ipr
 *.iws
