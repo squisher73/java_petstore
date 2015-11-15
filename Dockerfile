@@ -1,5 +1,5 @@
 FROM jboss/wildfly
-ADD your-awesome-app.war /opt/jboss/wildfly/standalone/deployments/
+ADD ROOT.war /opt/jboss/wildfly/standalone/deployments/
 
 
 # download jolokia in the sti builder
