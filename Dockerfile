@@ -4,7 +4,8 @@ FROM jboss/wildfly:8.2.0.Final
 COPY postgresql-9.3-1103.jdbc3.jar /
 COPY datasource.cli /
 	#COPY postgres-ds.xml /opt/jboss/wildfly/standalone/deployments/
-	#CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
 COPY ROOT.war /opt/jboss/wildfly/standalone/deployments/
 	#RUN /opt/jboss/wildfly/config.sh
+RUN sleep 5
 RUN /opt/jboss/wildfly/bin/jboss-cli.sh --file=/datasource.cli
