@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema">
+  <datasource jndi-name="java:jboss/datasources/PostgresDS" enabled="true" use-java-context="true" pool-name="myPoolDS">
+      <connection-url>jdbc:postgresql://127.10.130.2:5432/wildflytest</connection-url>
+      <driver>org.postgresql.Driver</driver>
+      <pool>
+          <max-pool-size>30</max-pool-size>
+      </pool>
+      <security>
+        <user-name>adminjk8vliu</user-name>
+        <password>Gw9kVkChXCqp</password>
+      </security>
+  </datasource>
+</datasources>
