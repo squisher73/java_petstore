@@ -3,6 +3,6 @@ batch
 module add --name=org.postgres --resources=/postgresql-9.3-1103.jdbc3.jar --dependencies=javax.api,javax.transaction.api
 /subsystem=datasources/jdbc-driver=postgres:add(driver-name="postgres",driver-module-name="org.postgres",driver-class-name=org.postgresql.Driver)
 data-source add --jndi-name=java:jboss/datasources/PostgreSQLDS --name=PostgreSQLDS --connection-url=jdbc:postgresql://172.30.135.101:5432/wildflytest --driver-name=postgres --user-name=adminjk8vliu --password=Gw9kVkChXCqp
-deploy /opt/jboss/wildfly/standalone/deployments/ROOT.war
+deploy /opt/jboss/wildfly/standalone/deployments/
 run-batch
 
