@@ -8,5 +8,4 @@ COPY datasource.cli /
 	#CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
 COPY ROOT.war /opt/jboss/wildfly/standalone/deployments/
 	#RUN /opt/jboss/wildfly/config.sh
-USER jboss
 RUN /execute.sh
