@@ -4,5 +4,5 @@ COPY datasource.cli /
 COPY ROOT.war /opt/jboss/wildfly/standalone/deployments/
 RUN /opt/jboss/wildfly/bin/standalone.sh -c standalone.xml  > /dev/null &
 RUN sleep 120s
-RUN /opt/jboss/wildfly/jboss-cli.sh --file=/datasource.cli
-RUN /opt/jboss/wildfly/jboss-cli.sh -c ":shutdown"
+RUN /opt/jboss/wildfly/bin/jboss-cli.sh --file=/datasource.cli
+RUN /opt/jboss/wildfly/bin/jboss-cli.sh -c ":shutdown"
